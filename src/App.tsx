@@ -5,7 +5,7 @@ import './App.css'
 import { dummyData } from './data/todos'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
     <main className="py-10 h-screen">
