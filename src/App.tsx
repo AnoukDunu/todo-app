@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { dummyData } from './data/todos'
+import ToDoItem from './components/ToDoItem'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -15,9 +16,11 @@ function App() {
             {/* the curly braces are baasically used to insert javascript expressions into the html */}
             {dummyData.map((todo) => (
               // when rendering a list of items, you should always provide a unique key prop to each item
-              <p key={todo.id} className='text-lg'>
-                {todo.title}
-              </p>
+              // <p key={todo.id} className='text-lg'>
+              //   {todo.title}
+              // </p>
+
+              <ToDoItem />
             ))} 
           </div>
         </div>
