@@ -1,5 +1,6 @@
 // inserting data here for the todo app
 
+// inserting data here for the todo app
 import type { Todo } from "../types/todo";
 
 export const dummyData: Todo [] = [
