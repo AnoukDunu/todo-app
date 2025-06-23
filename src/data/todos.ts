@@ -16,6 +16,6 @@ export const dummyData: Todo [] = [
   {
     id: 3,
     title: 'Build a Todo App',
-    completed: false,
+    completed: true,
   },
 ];
