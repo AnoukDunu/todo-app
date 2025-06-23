@@ -3,7 +3,6 @@
 // To get this typscript object into this Component, you can pass it as a prop
 //props are function arguments to a react component
 //in typsecript, you can define the type of the props using an interface
-import React from 'react';
 import type { Todo } from "../types/todo";
 
 interface ToDoItemProps {
