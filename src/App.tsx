@@ -20,7 +20,7 @@ function App() {
               //   {todo.title}
               // </p>
 
-              <ToDoItem />
+              <ToDoItem todo={todo}/>
             ))} 
           </div>
         </div>
