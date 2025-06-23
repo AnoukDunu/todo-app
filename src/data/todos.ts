@@ -1,6 +1,8 @@
 // inserting data here for the todo app
 
-export const todos = [
+import type { Todo } from "../types/todo";
+
+export const dummyData: Todo [] = [
   {
     id: 1,
     title: 'Learn React',
