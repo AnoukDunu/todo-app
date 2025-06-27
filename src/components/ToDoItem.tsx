@@ -7,6 +7,10 @@ import type { Todo } from "../types/todo";
 
 interface ToDoItemProps {
     todo: Todo;
+    //creating another prop with the name
+    //this prop is also being made as a function, which is why it looks kinda weird below
+    //this function takes arguments. These paraments/arguments are so that the parent knows which items are completed etc. Simple stuff
+    onCompletedCheck: (id: number, completed: boolean) => void;
 }
 
 export default function ToDoItem({todo}: ToDoItemProps) {
