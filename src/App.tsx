@@ -21,6 +21,8 @@ function App() {
     console.log(`Todo with id ${id} is now ${completed ? 'completed' : 'not completed'}`);
 
     setTodos((prevTodos) => 
+      // this map function creates a new array with the updated todo item
+      // this just updates the array state and renders a new array on the screen, doesn't exactly change the state permanently into a database
       prevTodos.map((todo) => (
         todo.id == id ? { ...todo, completed } : todo
       ))
