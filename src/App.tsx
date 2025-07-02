@@ -10,6 +10,13 @@ import ToDoItem from './components/ToDoItem'
 function App() {
   // const [count, setCount] = useState(0)
 
+  function setTodoCompleted(id: number, completed: boolean) {
+    // this function will be called when the checkbox is checked or unchecked
+    // you can use this function to update the state of the todo item
+    // for now, we will just log the id and completed status to the console
+    alert(`Todo with id ${id} is now ${completed ? 'completed' : 'not completed'}`);
+  }
+
   return (
     <main className="py-10 h-screen">
       <h1 className="text-3xl font-bold text-center mb-10"> Your Todos</h1>
@@ -22,7 +29,10 @@ function App() {
               //   {todo.title}
               // </p>
 
-              <ToDoItem key={todo.id} todo={todo}/>
+              <ToDoItem 
+              key={todo.id}
+              todo={todo}
+              onCompletedCheck={setTodoCompleted}/>
             ))} 
           </div>
         </div>

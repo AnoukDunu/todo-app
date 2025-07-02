@@ -13,12 +13,15 @@ interface ToDoItemProps {
     onCompletedCheck: (id: number, completed: boolean) => void;
 }
 
-export default function ToDoItem({todo}: ToDoItemProps) {
+export default function ToDoItem({todo, onCompletedCheck}: ToDoItemProps) {
     return (
         <div className='bg-white p-4 rounded-lg shadow-md'>
             <label className="flex items-center gap-2 border rounded-md p-2 border-gray-400 bg-wite hover:bg-slate-50">
                 <input
                     type="checkbox"
+                    checked={todo.completed}
+                    // executing the callback function below
+                    onChange={(e) => onCompletedCheck(todo.id, e.target.checked)}
                     className="scale-125"
                 />
                 <span className={todo.completed ? 'line-through text-gray-400' : ''}>
