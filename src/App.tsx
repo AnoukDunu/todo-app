@@ -5,17 +5,27 @@ import React from 'react'
 import './App.css'
 import { dummyData } from './data/todos'
 import ToDoItem from './components/ToDoItem'
+import { useState } from 'react'
 
 
 function App() {
   // const [count, setCount] = useState(0)
 
+  // to actually change the state of the todo items when clicked, we need the react state
+  // the functions that start with the word "use" are called hooks
+  const [todos, setTodos] = useState(dummyData);
+
   function setTodoCompleted(id: number, completed: boolean) {
     // this function will be called when the checkbox is checked or unchecked
     // you can use this function to update the state of the todo item
     // for now, we will just log the id and completed status to the console
-    alert(`Todo with id ${id} is now ${completed ? 'completed' : 'not completed'}`);
-  }
+    console.log(`Todo with id ${id} is now ${completed ? 'completed' : 'not completed'}`);
+
+    setTodos((prevTodos) => 
+      prevTodos.map((todo) => (
+        todo.id == id ? { ...todo, completed } : todo
+      ))
+    );
 
   return (
     <main className="py-10 h-screen">
