@@ -5,6 +5,7 @@ import React from 'react'
 import './App.css'
 import { dummyData } from './data/todos'
 import ToDoItem from './components/ToDoItem'
+import AddToDoForm from './components/AddToDoForm'
 
 
 function App() {
@@ -32,7 +33,10 @@ function App() {
   return (
     <main className="py-10 h-screen">
       <h1 className="text-3xl font-bold text-center mb-10"> Your Todos</h1>
-        <div className='max-w-lg mx-auto'>
+        <div className='max-w-lg mx-auto bg-slate-100 rounded-md p-5 space-y-6'>
+          <AddToDoForm />
+
+          {/* div that wraps the todo list items component */}
           <div className='space-y-2'>
             {/* the curly braces are baasically used to insert javascript expressions into the html */}
             {todos.map((todo) => (
