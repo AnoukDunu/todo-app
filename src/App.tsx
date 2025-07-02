@@ -5,7 +5,6 @@ import React from 'react'
 import './App.css'
 import { dummyData } from './data/todos'
 import ToDoItem from './components/ToDoItem'
-import { useState } from 'react'
 
 
 function App() {
@@ -25,7 +24,8 @@ function App() {
       prevTodos.map((todo) => (
         todo.id == id ? { ...todo, completed } : todo
       ))
-    );
+      );
+    }
 
   return (
     <main className="py-10 h-screen">
