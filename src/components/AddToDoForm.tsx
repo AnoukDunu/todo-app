@@ -3,7 +3,7 @@
 
 export default function AddToDoForm() {
     return (
-        <form>
+        <form className="flex">
             <input 
                 placeholder="Add a new todo"
                 className="rounded-s-md grow border border-gray-400 p-2"
